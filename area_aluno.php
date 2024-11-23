@@ -22,7 +22,7 @@ if (!isset($_SESSION['id']) || $_SESSION['tipo'] != 'aluno') {
 
     <!-- Opções para o aluno -->
     <ul>
-        <li><a href="meus_planos.php">Meus Planos de Treino</a></li>
+        <li><a href="planos_treino.php">Meus Planos de Treino</a></li>
         <li><a href="logout.php">Sair</a></li>
     </ul>
 </body>

@@ -1,120 +1,109 @@
-/* Resetando estilos padrões */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Corpo da página */
+/* Estilos gerais para o corpo da página */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f7fa;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0; /* Cor de fundo suave */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
-/* Container principal */
+/* Estilos do container de login */
 .login-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
     width: 100%;
-    max-width: 450px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 40px;
-}
-
-/* Formulário */
-.form-wrapper {
+    max-width: 400px; /* Largura máxima */
     text-align: center;
 }
 
-.logo img {
-    width: 100px;
+/* Logo e título */
+.login-container h2 {
+    font-size: 24px;
     margin-bottom: 20px;
+    color: #333; /* Cor do texto */
+    font-weight: 600;
 }
 
-h2 {
-    color: #4CAF50;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-h3 {
-    font-size: 1.6rem;
-    color: #333;
-}
-
-p {
-    font-size: 1rem;
-    color: #777;
-    margin-bottom: 20px;
+/* Estilos do formulário */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Estilo dos campos de input */
-.input-group {
-    margin-bottom: 15px;
-}
-
-input[type="text"], input[type="password"] {
+.login-form input {
     width: 100%;
     padding: 12px;
-    border-radius: 4px;
+    margin: 10px 0;
     border: 1px solid #ddd;
-    font-size: 1rem;
+    border-radius: 8px;
+    font-size: 16px;
     color: #333;
+    transition: all 0.3s ease; /* Transição suave para foco */
 }
 
-input[type="text"]:focus, input[type="password"]:focus {
-    border-color: #4CAF50;
+/* Foco nos campos de input */
+.login-form input:focus {
+    border-color: #4CAF50; /* Cor do foco */
     outline: none;
 }
 
-/* Estilo do botão de login */
-.login-btn {
+/* Botão de envio */
+.login-form button {
     width: 100%;
     padding: 12px;
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 4px;
-    font-size: 1.1rem;
+    border-radius: 8px;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
-.login-btn:hover {
+/* Efeito de hover no botão */
+.login-form button:hover {
     background-color: #45a049;
 }
 
-/* Esqueci a senha */
-.forgot-password {
-    margin-top: 15px;
+/* Estilo do link para cadastro */
+.login-form p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 20px;
 }
 
-.forgot-password a {
+.login-form p a {
     color: #4CAF50;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-weight: 600;
 }
 
-.forgot-password a:hover {
+/* Efeito de hover no link */
+.login-form p a:hover {
     text-decoration: underline;
 }
 
-/* Link de Cadastro */
-.register {
-    margin-top: 30px;
-    font-size: 1rem;
+/* Estilo das mensagens de erro */
+p.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
 }
 
-.register-link {
-    color: #4CAF50;
-    font-weight: bold;
-    text-decoration: none;
-}
+/* Responsividade para telas pequenas */
+@media (max-width: 500px) {
+    .login-container {
+        padding: 20px;
+    }
 
-.register-link:hover {
-    text-decoration: underline;
-    color: #45a049;
+    .login-form input, .login-form button {
+        font-size: 14px;
+    }
 }
